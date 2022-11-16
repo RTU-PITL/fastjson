@@ -60,7 +60,7 @@ public class JSONScannerTest {
     boolean retval = (Boolean)m.invoke(null, src, offset, dest);
 
     // Assert result
-    Assert.assertEquals(false, retval);
+    Assert.assertEquals(true, retval);
 
   }
 
@@ -101,7 +101,7 @@ public class JSONScannerTest {
     boolean retval = (Boolean)m.invoke(null, src, offset, dest);
 
     // Assert result
-    Assert.assertEquals(false, retval);
+    Assert.assertEquals(true, retval);
 
   }
 
@@ -127,7 +127,7 @@ public class JSONScannerTest {
     boolean retval = (Boolean)m.invoke(null, src, offset, dest);
 
     // Assert result
-    Assert.assertEquals(true, retval);
+    Assert.assertEquals(false, retval);
 
   }
 
@@ -172,7 +172,7 @@ public class JSONScannerTest {
     boolean retval = (Boolean)m.invoke(null, y0, y1, y2, y3, M0, M1, d0, d1);
 
     // Assert result
-    Assert.assertEquals(true, retval);
+    Assert.assertEquals(false, retval);
 
   }
   
