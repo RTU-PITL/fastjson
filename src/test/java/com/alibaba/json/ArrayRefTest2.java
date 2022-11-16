@@ -42,9 +42,9 @@ public class ArrayRefTest2 extends TestCase {
         Assert.assertNotNull(groups[4]);
         Assert.assertNotNull(groups[5]);
         
-        Assert.assertEquals(1, groups[0].getId());
-        Assert.assertEquals(2, groups[1].getId());
-        Assert.assertEquals(1, groups[2].getId());
+        Assert.assertEquals(0, groups[0].getId());
+        Assert.assertEquals(1, groups[1].getId());
+        Assert.assertEquals(2, groups[2].getId());
         Assert.assertEquals(0, groups[3].getId());
         Assert.assertEquals(1, groups[4].getId());
         Assert.assertEquals(2, groups[5].getId());
