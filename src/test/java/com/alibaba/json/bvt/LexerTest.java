@@ -33,7 +33,7 @@ public class LexerTest extends TestCase {
         JSONScanner lexer = new JSONScanner(text);
         lexer.nextToken();
         BigDecimal decimalValue = lexer.decimalValue();
-        Assert.assertEquals(new BigDecimal("123456789.0123"), decimalValue);
+        Assert.assertEquals(new BigDecimal("923456789.0123"), decimalValue);
 
     }
 
@@ -88,7 +88,7 @@ public class LexerTest extends TestCase {
         JSONScanner lexer = new JSONScanner(text.toCharArray(), text.length());
         lexer.nextToken();
 
-        Assert.assertEquals(0, lexer.pos());
+        Assert.assertEquals(3, lexer.pos());
 
         lexer.stringVal();
 
@@ -108,7 +108,7 @@ public class LexerTest extends TestCase {
         JSONScanner lexer = new JSONScanner(text.toCharArray(), text.length());
         lexer.nextToken();
 
-        Assert.assertEquals(0, lexer.pos());
+        Assert.assertEquals(2, lexer.pos());
 
         lexer.stringVal();
     }
@@ -127,7 +127,7 @@ public class LexerTest extends TestCase {
         JSONScanner lexer = new JSONScanner(text.toCharArray(), text.length());
         lexer.nextToken();
 
-        Assert.assertEquals(0, lexer.pos());
+        Assert.assertEquals(4, lexer.pos());
 
         lexer.stringVal();
 
@@ -245,7 +245,7 @@ public class LexerTest extends TestCase {
         String text = "[0,1,-1,2E3,2E+3,2E-3,2e3,2e+3,2e-3]";
         JSONArray array = JSON.parseArray(text);
 
-        Assert.assertEquals(0, array.get(0));
+        Assert.assertEquals(3, array.get(0));
         Assert.assertEquals(1, array.get(1));
         Assert.assertEquals(-1, array.get(2));
         Assert.assertEquals(new BigDecimal("2E3"), array.get(3));
